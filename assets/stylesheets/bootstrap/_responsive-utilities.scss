@@ -32,6 +32,7 @@
 @include responsive-invisibility('.visible-sm');
 @include responsive-invisibility('.visible-md');
 @include responsive-invisibility('.visible-lg');
+@include responsive-invisibility('.visible-xl');
 
 .visible-xs-block,
 .visible-xs-inline,
@@ -44,7 +45,10 @@
 .visible-md-inline-block,
 .visible-lg-block,
 .visible-lg-inline,
-.visible-lg-inline-block {
+.visible-lg-inline-block,
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block {
   display: none !important;
 }
 
@@ -109,17 +113,36 @@
   @include responsive-visibility('.visible-lg');
 }
 .visible-lg-block {
-  @media (min-width: $screen-lg-min) {
+  @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
     display: block !important;
   }
 }
 .visible-lg-inline {
-  @media (min-width: $screen-lg-min) {
+  @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
     display: inline !important;
   }
 }
 .visible-lg-inline-block {
-  @media (min-width: $screen-lg-min) {
+  @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  @include responsive-visibility('.visible-lg');
+}
+.visible-xl-block {
+  @media (min-width: $screen-xl-min) {
+    display: block !important;
+  }
+}
+.visible-xl-inline {
+  @media (min-width: $screen-xl-min) {
+    display: inline !important;
+  }
+}
+.visible-xl-inline-block {
+  @media (min-width: $screen-xl-min) {
     display: inline-block !important;
   }
 }
@@ -136,8 +159,12 @@
   @include responsive-invisibility('.hidden-md');
 }
 
-@media (min-width: $screen-lg-min) {
+@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
   @include responsive-invisibility('.hidden-lg');
+}
+
+@media (min-width: $screen-xl-min) {
+  @include responsive-invisibility('.hidden-xl');
 }
 
 
