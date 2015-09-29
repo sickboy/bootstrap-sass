@@ -5,7 +5,7 @@
   "main": "assets/javascripts/bootstrap.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/twbs/bootstrap-sass"
+    "url": "git://github.com/sickboy/bootstrap-sass"
   },
   "keywords": [
     "bootstrap",
